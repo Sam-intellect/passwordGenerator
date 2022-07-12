@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PassWord Generator</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <div class="container gen-box">
+            <h2 class="text-white text-center first-text">Random Password <span class="fw-bolder">GENERATOR</span></h2>
+            <h4 class="text-light fs-6 text-center mb-5">Never use an insecure Password again</h4>
+
+            <div class="boxes d-flex gap-4 justify-content-center mb-5">
+                  <div class="box box1">
+                        <div class="innerbox p-2">
+                              <h5 class="text-dark fs-6 fw-light text-center mt-4">Length</h5>
+                              <div class="increment-button d-flex gap-3">
+                                    <div class=" minus ">
+                                          <input type="submit" value="-" class="length-change-plus">
+                                    </div>
+                                    <div class="length-display mt-1">13</div>
+                                    <div class=" plus ">
+                                          <input type="submit" value="+" class="length-change-minus">
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="box box2">
+                        <div class="innerbox p-2">
+                              <h5 class="text-dark fs-6 fw-light text-center mt-4">Symbol</h5>
+
+                              <div class="toggle">
+                                    <input type="checkbox" data-value="false" value="" id="symbol" />
+                                    <label for="symbol">Toggle</label>
+
+                              </div>
+                        </div>
+                  </div>
+                  <div class="box box3">
+                        <div class="innerbox p-2">
+                              <h5 class="text-dark fs-6 fw-light text-center mt-4">Number</h5>
+
+                              <div class="toggle">
+                                    <input type="checkbox" data-value="false" id="number" />
+                                    <label for="number">Toggle</label>
+                              </div>
+
+                        </div>
+                  </div>
+            </div>
+
+            <div class="result d-grid mx-5 px-2">
+                  <input class="btn text-dark " type="submit" value="Generate Passwords" height="10rem">
+            </div>
+            <hr class="mt-5 mx-5 px-2">
+
+            <div class="lower-part d-flex gap-2 mx-5 px-2">
+                  <div class="icon"><i class="bi bi-x-diamond-fill fs-2 diamond"></i></div>
+                  <div class="text mt-3 text-light">
+                        <h6>Made by Intellect</h6>
+                  </div>
+            </div>
+
+      </div>
+
+</body>
+<script src="/script.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"></script>
+
+</html>
