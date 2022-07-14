@@ -40,13 +40,21 @@ number.addEventListener('click', e => {
 });
 
 // For the length Increment and decrement
-lengthDisplay.textContent = 4;
+lengthDisplay.textContent = 10;
 
 minusSign.addEventListener('click', () => {
-  --lengthDisplay.textContent;
-  console.log('This is minus');
+  if (parseInt(lengthDisplay.textContent) > 4) {
+    --lengthDisplay.textContent;
+  }
 });
 PlusSign.addEventListener('click', () => {
-  lengthDisplay.textContent++;
-  console.log('This is plus');
+  if (parseInt(lengthDisplay.textContent) < 15) {
+    lengthDisplay.textContent++;
+    console.log('This is plus');
+  }
 });
+
+// generating random
+const letters = 'abcdefghijklmnopqrstuvwxyz';
+const numbers = '0123456789';
+const symbols = "#$%&'()=~|`*}@:;/.,?><,+*]";
