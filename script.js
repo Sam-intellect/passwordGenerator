@@ -40,7 +40,7 @@ number.addEventListener('click', e => {
 });
 
 // For the length Increment and decrement
-lengthDisplay.textContent = 0;
+lengthDisplay.textContent = 4;
 
 minusSign.addEventListener('click', () => {
   --lengthDisplay.textContent;
