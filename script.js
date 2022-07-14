@@ -2,6 +2,9 @@
 
 const lenPlus = document.querySelector('.length-change-plus');
 const lenMinus = document.querySelector('.length-change-minus');
+const lengthDisplay = document.querySelector('.length-display');
+const minusSign = document.querySelector('.length--minus');
+const PlusSign = document.querySelector('.length--plus');
 
 let setSymbol = false;
 const symbol = document.querySelector('#symbol');
@@ -34,4 +37,16 @@ number.addEventListener('click', e => {
     setNumber = false;
   }
   console.log(setNumber);
+});
+
+// For the length Increment and decrement
+lengthDisplay.textContent = 0;
+
+minusSign.addEventListener('click', () => {
+  --lengthDisplay.textContent;
+  console.log('This is minus');
+});
+PlusSign.addEventListener('click', () => {
+  lengthDisplay.textContent++;
+  console.log('This is plus');
 });
