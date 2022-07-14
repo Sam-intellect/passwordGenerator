@@ -5,6 +5,7 @@ const lenMinus = document.querySelector('.length-change-minus');
 const lengthDisplay = document.querySelector('.length-display');
 const minusSign = document.querySelector('.length--minus');
 const PlusSign = document.querySelector('.length--plus');
+const generatePassword = document.querySelector('.genPassword');
 
 let setSymbol = false;
 const symbol = document.querySelector('#symbol');
@@ -58,3 +59,13 @@ PlusSign.addEventListener('click', () => {
 const letters = 'abcdefghijklmnopqrstuvwxyz';
 const numbers = '0123456789';
 const symbols = "#$%&'()=~|`*}@:;/.,?><,+*]";
+
+generatePassword.addEventListener('click', () => {
+  if (!setNumber) {
+    console.log('number is toggled');
+  }
+  if (setSymbol) {
+    console.log('Symbol is toggled');
+  }
+  console.log(lengthDisplay.textContent);
+});
