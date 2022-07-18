@@ -6,7 +6,9 @@ const lengthDisplay = document.querySelector('.length-display');
 const minusSign = document.querySelector('.length--minus');
 const PlusSign = document.querySelector('.length--plus');
 const generatePassword = document.querySelector('.genPassword');
+const passwordGen = document.querySelector('.passGenerated');
 
+// symbols toggling
 let setSymbol = false;
 const symbol = document.querySelector('#symbol');
 
@@ -20,24 +22,22 @@ symbol.addEventListener('click', function (e) {
     e.target.setAttribute('data-value', 'false');
     setSymbol = false;
   }
-
-  console.log(setSymbol);
 });
 
+// Numbers Toggling
 let setNumber = false;
 const number = document.querySelector('#number');
 
 number.addEventListener('click', e => {
-  const value = e.target.getAttribute('value');
+  const value = e.target.getAttribute('data-value');
 
   if (value == 'false') {
-    e.target.setAttribute('value', true);
+    e.target.setAttribute('data-value', true);
     setNumber = true;
   } else {
-    e.target.setAttribute('value', 'false');
+    e.target.setAttribute('data-value', 'false');
     setNumber = false;
   }
-  console.log(setNumber);
 });
 
 // For the length Increment and decrement
@@ -57,15 +57,57 @@ PlusSign.addEventListener('click', () => {
 
 // generating random
 const letters = 'abcdefghijklmnopqrstuvwxyz';
+const letterUpper = letters.toUpperCase();
 const numbers = '0123456789';
 const symbols = "#$%&'()=~|`*}@:;/.,?><,+*]";
 
+let password = [letters, letterUpper, numbers, symbols];
+
+// funtion for if the symbol is true
+function symbolIsTrue() {
+  if (setSymbol) console.log('symbol is true');
+}
+
+function genPassword(length) {
+  let result = '';
+  if (setNumber && setSymbol) {
+    password === [letters, letterUpper, number, symbols].join('');
+
+    const passwordLength = password.length;
+
+    for (let i = 0; i < length; i++) {
+      result += password.charAt(Math.floor(Math.random() * passwordLength));
+    }
+  } else if (setNumber) {
+    password === [letters, letterUpper, numbers].join('');
+
+    const passwordLength = password.length;
+
+    for (let i = 0; i < length; i++) {
+      result += password.charAt(Math.floor(Math.random() * passwordLength));
+    }
+  } else if (setSymbol) {
+    password === [letters, letterUpper, symbols].join('');
+
+    const passwordLength = password.length;
+
+    for (let i = 0; i < length; i++) {
+      result += password.charAt(Math.floor(Math.random() * passwordLength));
+    }
+  } else {
+    password === [letters, letterUpper].join('');
+
+    const passwordLength = password.length;
+
+    for (let i = 0; i < length; i++) {
+      result += password.charAt(Math.floor(Math.random() * passwordLength));
+    }
+  }
+
+  return result;
+}
+
 generatePassword.addEventListener('click', () => {
-  if (!setNumber) {
-    console.log('number is toggled');
-  }
-  if (setSymbol) {
-    console.log('Symbol is toggled');
-  }
-  console.log(lengthDisplay.textContent);
+  passwordGen.innerText = genPassword(lengthDisplay.textContent);
+  // genPassword(lengthDisplay.textContent);
 });

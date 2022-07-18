@@ -67,7 +67,8 @@ input[type='checkbox'] {
   background: black;
   border-radius: 2rem;
 }
-.container .toggle {
+.container .toggle-symbol,
+.toggle-number {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -115,9 +116,14 @@ label:active:after {
 .container .btn {
   background: rgb(69, 227, 69);
 }
+.passGenerated {
+  color: white;
+  align-items: center;
+  justify-items: center;
+  font-size: large;
+}
 
 .container hr {
-  /* color: inherit; */
   border: 5rem;
   border-top: 2px solid white;
   opacity: 0.25;
