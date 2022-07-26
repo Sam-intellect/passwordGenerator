@@ -49,7 +49,7 @@ minusSign.addEventListener('click', () => {
   }
 });
 PlusSign.addEventListener('click', () => {
-  if (parseInt(lengthDisplay.textContent) < 15) {
+  if (parseInt(lengthDisplay.textContent) < 20) {
     lengthDisplay.textContent++;
     console.log('This is plus');
   }
@@ -59,55 +59,38 @@ PlusSign.addEventListener('click', () => {
 const letters = 'abcdefghijklmnopqrstuvwxyz';
 const letterUpper = letters.toUpperCase();
 const numbers = '0123456789';
-const symbols = "#$%&'()=~|`*}@:;/.,?><,+*]";
+const symbols = '#$%&()=~|*}@:;/?><+*]';
 
-let password = [letters, letterUpper, numbers, symbols];
+const password = [letters, letterUpper];
 
-// funtion for if the symbol is true
-function symbolIsTrue() {
-  if (setSymbol) console.log('symbol is true');
-}
+let newPassword = '';
 
 function genPassword(length) {
-  let result = '';
-  if (setNumber && setSymbol) {
-    password === [letters, letterUpper, number, symbols].join('');
+  let result = letters + letterUpper;
 
-    const passwordLength = password.length;
+  // const passwordLength = result.length;
 
-    for (let i = 0; i < length; i++) {
-      result += password.charAt(Math.floor(Math.random() * passwordLength));
-    }
-  } else if (setNumber) {
-    password === [letters, letterUpper, numbers].join('');
-
-    const passwordLength = password.length;
-
-    for (let i = 0; i < length; i++) {
-      result += password.charAt(Math.floor(Math.random() * passwordLength));
-    }
-  } else if (setSymbol) {
-    password === [letters, letterUpper, symbols].join('');
-
-    const passwordLength = password.length;
-
-    for (let i = 0; i < length; i++) {
-      result += password.charAt(Math.floor(Math.random() * passwordLength));
-    }
-  } else {
-    password === [letters, letterUpper].join('');
-
-    const passwordLength = password.length;
-
-    for (let i = 0; i < length; i++) {
-      result += password.charAt(Math.floor(Math.random() * passwordLength));
-    }
+  if (setSymbol) {
+    result += symbols;
+  }
+  if (setNumber) {
+    result += numbers;
   }
 
-  return result;
+  var a = result.split(''),
+    n = a.length;
+
+  for (var i = n - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i];
+    a[i] = a[j];
+    a[j] = tmp;
+  }
+  result = a.join('');
+
+  return result.slice(2, parseInt(length) + 2);
 }
 
 generatePassword.addEventListener('click', () => {
   passwordGen.innerText = genPassword(lengthDisplay.textContent);
-  // genPassword(lengthDisplay.textContent);
 });
