@@ -13,69 +13,122 @@
 </head>
 
 <body>
-      <div class="container gen-box">
-            <h2 class="text-white text-center first-text">Random Password <span class="fw-bolder">GENERATOR</span></h2>
-            <h4 class="text-light fs-6 text-center mb-5">Never use an insecure Password again</h4>
+      <div class=" section-1 container">
+            <div class="container gen-box-1" id="set1">
+                  <div class="hacker-image">
+                        <img src="/hacker.png" alt="" width="200rem">
+                  </div>
+                  <div class="front-text">
+                        <h2 class="text-white text-center first-text fs-1 fw-bolder mt-5 mb-4">SAFE PASSWORD</span>
+                        </h2>
+                        <h4 class="text-light fs-6 text-center mb-5 px-5 mx-5">You dont have to crack your head
+                              to get a complex
+                              password to enhance your security </h4>
+                  </div>
 
-            <div class="boxes d-flex gap-4 justify-content-center mb-5">
-                  <div class="box box1">
-                        <div class="innerbox p-2">
-                              <h5 class="text-dark fs-6 fw-light text-center mt-4">Length</h5>
-                              <div class="increment-button d-flex gap-3">
-                                    <div class=" minus ">
-                                          <input type="submit" value="-" class="length--minus">
+            </div>
+            <div class="letGo d-grid mx-5 px-5 ">
+                  <button class="btn btn-light go" type="button">Let's Go ! 😎</button>
+            </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="main d-flex">
+            <div class="side-picture container">
+                  <div class="col-6">
+                        <div class="image">
+                              <img src="/password.png" alt="" width="600rem">
+                        </div>
+                        <div class="img-text text-white px-4 mt-1 shadow-lg">
+                              <h1 class="fw-light fs-5 text-center py-2">Hey, you dont need to crack your head on how
+                                    complex your
+                                    password
+                                    have to be. We gat
+                                    you🤪</h1>
+                        </div>
+
+                  </div>
+            </div>
+            <div class="container gen-box">
+                  <h2 class="text-white text-center first-text">Random Password <span class="fw-bolder">GENERATOR</span>
+                  </h2>
+                  <h4 class="text-light fs-6 text-center mb-5">Never use an insecure Password again</h4>
+
+                  <div class="boxes d-flex gap-4 justify-content-center mb-5">
+                        <div class="box box1">
+                              <div class="innerbox p-2">
+                                    <h5 class="text-dark fs-6 fw-light text-center mt-4">Length</h5>
+                                    <div class="increment-button d-flex gap-3">
+                                          <div class=" minus ">
+                                                <input type="submit" value="-" class="length--minus">
+                                          </div>
+                                          <p class="length-display mt-1">13</p>
+                                          <div class=" plus ">
+                                                <input type="submit" value="+" class="length--plus">
+                                          </div>
                                     </div>
-                                    <p class="length-display mt-1">13</p>
-                                    <div class=" plus ">
-                                          <input type="submit" value="+" class="length--plus">
+                              </div>
+                        </div>
+
+                        <!-- Symbols -->
+                        <div class="box box2">
+                              <div class="innerbox p-2">
+                                    <h5 class="text-dark fs-6 fw-light text-center mt-4">Symbol</h5>
+
+                                    <div class="toggle-symbol">
+                                          <input type="checkbox" data-value="false" value="" id="symbol" />
+                                          <label for="symbol">Toggle</label>
+
                                     </div>
                               </div>
                         </div>
-                  </div>
 
-                  <!-- Symbols -->
-                  <div class="box box2">
-                        <div class="innerbox p-2">
-                              <h5 class="text-dark fs-6 fw-light text-center mt-4">Symbol</h5>
+                        <!-- Numbers -->
+                        <div class="box box3">
+                              <div class="innerbox p-2">
+                                    <h5 class="text-dark fs-6 fw-light text-center mt-4">Number</h5>
 
-                              <div class="toggle-symbol">
-                                    <input type="checkbox" data-value="false" value="" id="symbol" />
-                                    <label for="symbol">Toggle</label>
+                                    <div class="toggle-number">
+                                          <input type="checkbox" data-value="false" id="number" />
+                                          <label for="number">Toggle</label>
+                                    </div>
 
                               </div>
                         </div>
                   </div>
 
-                  <!-- Numbers -->
-                  <div class="box box3">
-                        <div class="innerbox p-2">
-                              <h5 class="text-dark fs-6 fw-light text-center mt-4">Number</h5>
 
-                              <div class="toggle-number">
-                                    <input type="checkbox" data-value="false" id="number" />
-                                    <label for="number">Toggle</label>
+                  <!-- Result -->
+                  <div class="result d-grid mx-5 px-2">
+                        <input class=" btn btn-gen text-dark genPassword " type="submit" value="Generate Passwords"
+                              height="10rem">
+                  </div>
+                  <p class="passGenerated d-grid mt-3 mx-5 px-2 fs-3">
+                        🧑‍💻
+                  </p>
+                  <hr class="mt-5 mx-5 px-2">
+
+
+
+                  <div class=" footer gap-5 hstack mx-5 px-2">
+                        <div class=" hstack gap-2">
+                              <div class="icon"><i class="bi bi-x-diamond-fill fs-2 diamond"></i></div>
+                              <div class="text mt-2 text-light">
+                                    <h6>Made by Intellect</h6>
                               </div>
-
                         </div>
+                        <input class="btn btn-danger exit" type="submit" value="Exit">
+
                   </div>
-            </div>
 
 
-            <!-- Result -->
-            <div class="result d-grid mx-5 px-2">
-                  <input class="btn text-dark genPassword " type="submit" value="Generate Passwords" height="10rem">
             </div>
-            <p class="passGenerated d-grid mt-3 mx-5 px-2 fs-3">
-                   🧑‍💻
-            </p>
-            <hr class="mt-5 mx-5 px-2">
 
-            <div class="lower-part d-flex gap-2 mx-5 px-2">
-                  <div class="icon"><i class="bi bi-x-diamond-fill fs-2 diamond"></i></div>
-                  <div class="text mt-3 text-light">
-                        <h6>Made by Intellect</h6>
-                  </div>
-            </div>
       </div>
 
 </body>

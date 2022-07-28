@@ -1,5 +1,7 @@
 'use strict';
 
+const containerApp = document.querySelector('.main');
+const app = document.querySelector('.section-1');
 const lenPlus = document.querySelector('.length-change-plus');
 const lenMinus = document.querySelector('.length-change-minus');
 const lengthDisplay = document.querySelector('.length-display');
@@ -7,6 +9,8 @@ const minusSign = document.querySelector('.length--minus');
 const PlusSign = document.querySelector('.length--plus');
 const generatePassword = document.querySelector('.genPassword');
 const passwordGen = document.querySelector('.passGenerated');
+const btnExit = document.querySelector('.exit');
+const btnGo = document.querySelector('.go');
 
 // symbols toggling
 let setSymbol = false;
@@ -93,4 +97,17 @@ function genPassword(length) {
 
 generatePassword.addEventListener('click', () => {
   passwordGen.innerText = genPassword(lengthDisplay.textContent);
+});
+
+btnExit.addEventListener('click', () => {
+  // document.getElementById('set1').style.display = 'block';
+  containerApp.style.opacity = 0;
+
+  app.style.opacity = 100;
+});
+btnGo.addEventListener('click', () => {
+  console.log('hello');
+
+  containerApp.style.opacity = 100;
+  app.style.opacity = 0;
 });
