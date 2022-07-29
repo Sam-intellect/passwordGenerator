@@ -35,7 +35,15 @@ body {
 .hacker-image {
   position: relative;
   top: 0px;
-  left: 100px;
+  left: 50px;
+}
+.front-text .text-center-1 {
+  position: relative;
+  left: 70px;
+}
+.front-text .text-center-2 {
+  position: relative;
+  left: 10px;
 }
 
 .go {
@@ -50,7 +58,6 @@ body {
   /* NOTE This creates the fade in/out anumation */
   opacity: 0;
   transition: all 1s;
-
 }
 
 .side-picture {
@@ -172,4 +179,47 @@ label:active:after {
 }
 .container .diamond {
   color: rgb(69, 227, 69);
+}
+
+@media (min-width: 375px) and (max-width: 428px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    overflow-x: hidden;
+  }
+
+  .side-picture {
+    display: none;
+  }
+  .gen-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  .container .increment-button {
+    position: absolute;
+    top: 4rem;
+    left: 0.1rem;
+    width: 4rem;
+    gap: 2%;
+  }
+  .container .toggle-symbol {
+    position: absolute;
+    top: 30px;
+    left: 0.5rem;
+  }
+  .container .toggle-number {
+    position: absolute;
+    top: 30px;
+    left: 0.5rem;
+  }
 }
