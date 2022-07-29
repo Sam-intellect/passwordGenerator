@@ -190,6 +190,14 @@ label:active:after {
     overflow-x: hidden;
   }
 
+  .go {
+    position: relative;
+    top: 150%;
+    right: 15%;
+    width: 400px;
+    height: 50px;
+  }
+
   .side-picture {
     display: none;
   }
