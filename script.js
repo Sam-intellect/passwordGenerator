@@ -11,6 +11,7 @@ const generatePassword = document.querySelector('.genPassword');
 const passwordGen = document.querySelector('.passGenerated');
 const btnExit = document.querySelector('.exit');
 const btnGo = document.querySelector('.go');
+const show = document.querySelector('.show');
 
 // symbols toggling
 let setSymbol = false;
@@ -55,7 +56,6 @@ minusSign.addEventListener('click', () => {
 PlusSign.addEventListener('click', () => {
   if (parseInt(lengthDisplay.textContent) < 20) {
     lengthDisplay.textContent++;
-    console.log('This is plus');
   }
 });
 
@@ -99,15 +99,23 @@ generatePassword.addEventListener('click', () => {
   passwordGen.innerText = genPassword(lengthDisplay.textContent);
 });
 
-btnExit.addEventListener('click', () => {
-  // document.getElementById('set1').style.display = 'block';
-  containerApp.style.opacity = 0;
-
-  app.style.opacity = 100;
-});
+// btnExit.addEventListener('click', () => {
+//   containerApp.classList.remove('show');
+//   app.classList.add('d-none');
+// });
+// btnGo.addEventListener('click', () => {
+//   containerApp.classList.add('d-none');
+//   app.classList.remove('d-none');
+// });
 btnGo.addEventListener('click', () => {
-  console.log('hello');
-
+  console.log('Its working');
+  app.classList.add('d-none');
+  containerApp.classList.remove('d-none');
   containerApp.style.opacity = 100;
-  app.style.opacity = 0;
+});
+
+btnExit.addEventListener('click', () => {
+  containerApp.classList.add('d-none');
+  app.classList.remove('d-none');
+  app.style.opacity = 100;
 });
