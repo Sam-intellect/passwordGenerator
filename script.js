@@ -99,16 +99,7 @@ generatePassword.addEventListener('click', () => {
   passwordGen.innerText = genPassword(lengthDisplay.textContent);
 });
 
-// btnExit.addEventListener('click', () => {
-//   containerApp.classList.remove('show');
-//   app.classList.add('d-none');
-// });
-// btnGo.addEventListener('click', () => {
-//   containerApp.classList.add('d-none');
-//   app.classList.remove('d-none');
-// });
 btnGo.addEventListener('click', () => {
-  console.log('Its working');
   app.classList.add('d-none');
   containerApp.classList.remove('d-none');
   containerApp.style.opacity = 100;
